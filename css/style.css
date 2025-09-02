@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+    font-family: 'Lilita_One';
+    src: url('../fonts/LilitaOne.ttf');
+}
+
+/* ===================
+    RESET Y FUENTES
+====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+body, html {
+    height: 100%;
+    background-color: #ffffff;
+}
+
+/* ===================
+    HEADER
+====================== */
+.header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 5px 60px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.header .nav-links {
+    list-style-type: none;
+}
+
+.header .nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.header .nav-links a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+}
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.header .conteiner .busqueda input {
+    width: 300px;
+    height: 40px;
+    color: #ffffff;
+    padding: 0 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: #1f1f1f;
+    font-size: 16px;
+}
+
+.header .conteiner .busqueda button,
+.header .btn button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header .btn button:hover,
+.header .conteiner .busqueda button:hover {
+    transform: scale(1.1);
+}
+
+.header .conteiner {
+    display: flex;
+    align-items: right;
+    gap: 10px;
+}
+
+
+/* ===================
+   MAIN
+====================== */
+.main{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.main .inicio h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.main .inicio img {
+    width: 100%;
+    max-width: 18
+    00px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.main .inicio button {
+    border-radius: 30px;
+    border: none;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main .inicio button a {
+    text-decoration: none;
+    color: white;
+}
+
+.main .inicio button:hover {
+    transform: scale(1.05);
+}
+
+.main .productos {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main .productos h2 {
+    font-family: Lilita_One;
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+
+.main .productos .secciones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.main .productos .secciones img {
+    width: 30%;
+    height: auto;
+}
+
+.main .btn-links {
+    list-style-type: none;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main .btn-links li {
+    transition: all 0.3s ease;
+}
+
+.main .btn-links button {
+    border-radius: 30px;
+    border: none;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.main .btn-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.main .btn-links li:hover {
+    transform: scale(1.1);
+}
+
+/* ===================
+   FOOTER
+====================== */
+.footer {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 5px 60px;
+    flex-wrap: wrap;
+    overflow-wrap:break-word   ;
+}
+
+.footer .redes {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer .redes li {
+    color: #ffffff;
+}
+
+.footer .redes a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    cursor: pointer;
+    flex-wrap: wrap;
+}

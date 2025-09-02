@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <title>Registrarme - Trapo Sport Wear</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Imagenes/Favicon/redondo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="https://kit.fontawesome.com/40202e00e6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../Imagenes/Transparente/logo-02.png" alt="Logo simplificado">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../secciones/productos.html">Productos</a></li>
+                <li><a href="../secciones/seccion_hombres.html">Hombre</a></li>
+                <li><a href="../secciones/seccion_mujeres.html">Mujer</a></li>
+                <li><a href="../secciones/seccion_niños.html">Niño/a</a></li>
+            </ul>
+        </nav>
+        <div class="conteiner">
+            <div class="busqueda">
+                <form method="GET" action="../php/buscar.php">
+                    <input type="text" placeholder="Buscar" name="busqueda">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <a href="../secciones/carrito.html" class="btn">
+                <button><i class="fa-solid fa-bag-shopping"></i></button>
+            </a>
+            <a href="../secciones/login.html" class="btn">
+                <button><i class="fa-solid fa-user"></i></button>
+            </a>
+        </div>
+    </header>
+
+    <main class="main"> 
+        <form method="POST" action="../php/register.php" class="login-form">
+            <h2>Registrarme</h2>
+
+            <label>Ingrese un nombre de usuario:</label>
+            <input type="text" name="user" placeholder="Cree un usuario" required>
+
+            <label>Ingrese una contraseña:</label>
+            <div style="position: relative;">
+                <input type="password" id="password" name="password" placeholder="Cree una contraseña" required>
+                <i class="fa-solid fa-eye" id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+            </div>
+
+            <label>Ingrese su e-mail:</label>
+            <input type="email" name="email" placeholder="Ingrese su e-mail" required>
+
+            <button type="submit">Registrarme</button>
+            <p>¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
+        </form>
+    </main>
+
+    <script>
+        // Mostrar/Ocultar contraseña y cambiar ícono
+        const togglePassword = document.getElementById("togglePassword");
+        const passwordInput = document.getElementById("password");
+
+        togglePassword.addEventListener("click", function () {
+            const isVisible = passwordInput.type === "text";
+            passwordInput.type = isVisible ? "password" : "text";
+            this.classList.toggle("fa-eye");
+            this.classList.toggle("fa-eye-slash");
+        });
+    </script>
+
+    <footer class="footer">
+            Todos los derechos reservados a Trapo Sport Wear® 2025
+            <ul class="redes">
+                <li><a class="youtube" href="https://www.youtube.com/@traposportwear/"><button><i class="fa-brands fa-youtube"></i></button>Youtube</a></li>
+                <li><a class="instagram" href="https://www.instagram.com/traposportwear/"><button><i class="fa-brands fa-instagram"></i></button>Instagram</a></li>
+                <li><a class="x" href="https://www.x.com/traposportwear/"><button><i class="fa-brands fa-x-twitter"></i></button>X</a></li>
+            </ul>
+    </footer>
+</body>
+</html>

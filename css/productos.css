@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}	
+
+body{
+    background-color: rgb(255, 255, 255)
+}
+
+.header{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 5px 60px;
+}
+
+.header .logo img{
+    width: auto;
+    height: 50px;
+}
+
+.header .logo{
+    cursor: pointer;
+}
+
+.header .nav-links{
+    list-style-type: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links a{
+    font-size: 700;
+    text-decoration: none;
+    color: black;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+
+}
+
+.header .src{
+    display: inline-block;
+    align-items: flex-end;
+}
+
+.header .btn button{
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    padding: 9px 25px;
+    background-color: rgb(31, 31, 31);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    background-color: rgb(31, 31, 31);
+    transform: scale(1.1);
+}

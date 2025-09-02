@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+    font-family: 'Lilita_One';
+    src: url('../fonts/LilitaOne.ttf');
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        max-width: 90%;
+        padding: 30px 20px;
+    }
+}
+
+
+/* ===================
+    RESET Y FUENTES
+====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+body, html {
+    height: 100%;
+    background-color: #ffffff;
+}
+
+/* ===================
+    HEADER
+====================== */
+.header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 5px 60px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.header .nav-links {
+    list-style-type: none;
+}
+
+.header .nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.header .nav-links a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+}
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.header .conteiner .busqueda input {
+    width: 300px;
+    height: 40px;
+    color: #ffffff;
+    padding: 0 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: #1f1f1f;
+    font-size: 16px;
+}
+
+.header .conteiner .busqueda button,
+.header .btn button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header .btn button:hover,
+.header .conteiner .busqueda button:hover {
+    transform: scale(1.1);
+}
+
+.header .conteiner {
+    display: flex;
+    align-items: right;
+    gap: 10px;
+}
+
+/* ===================
+   FORMULARIO DE LOGIN
+====================== */
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    min-height: calc(100vh - 90px);
+}
+
+.login-form {
+    background-color: #f5f5f5;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-form h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.login-form label {
+    font-weight: 600;
+    margin-bottom: 1px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #1f1f1f;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+.login-form button[type="submit"] {
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.login-form button[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+.login-form p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.login-form p a {
+    color: #1f1f1f;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-form p a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===================
+   FOOTER
+====================== */
+.footer {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 5px 60px;
+    flex-wrap: wrap;
+    overflow-wrap:break-word   ;
+}
+
+.footer .redes {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer .redes li {
+    color: #ffffff;
+}
+
+.footer .redes a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
