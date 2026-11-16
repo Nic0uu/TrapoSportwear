@@ -1,66 +1,290 @@
 <!DOCTYPE html>
 <html lang="es-AR">
-    <head>
-        <title>Trapo Sport Wear</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="Imagenes/Favicon/redondo.ico" type="ico">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://kit.fontawesome.com/40202e00e6.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header class="header">
-            <div class="logo">
-                <img src="Imagenes/Transparente/logo-02.png" alt= "Logo simplificado">
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href ="index.html">Inicio</a></li>
-                    <li><a href="secciones/productos.html">Productos</a></li>
-                    <li><a href="secciones/seccion_hombres.html">Hombre</a></li>
-                    <li><a href="secciones/seccion_mujeres.html">Mujer</a></li>
-                    <li><a href="secciones/seccion_niños.html">Niño/a</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trapo Sport Wear — Indumentaria Técnica</title>
+    <link rel="icon" href="Imagenes/Favicon/redondo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/catalog.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body data-base-path="">
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+    <header class="site-header" id="site-header">
+        <div class="header-inner container">
+            <a class="brand-logo" href="index.html" aria-label="Trapo Sport Wear — Inicio">
+                <img src="Imagenes/Transparente/logo-02.png" alt="Trapo Sport Wear">
+            </a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a class="nav-link is-active" href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a class="nav-link" href="secciones/productos.html">Productos</a></li>
+                    <li><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="conteiner">
-                <div class="busqueda">
-                    <form method="GET" action="secciones/buscar.html">
-                        <input type = "text" placeholder="Buscar" name="busqueda">
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                </div>
-                <a href="secciones/carrito.html" class="btn"><button><i class="fa-solid fa-bag-shopping"></i></button></a>
-                <a href="secciones/login.html" class="btn"><button><i class="fa-solid fa-user"></i></button></a>
+
+            <div class="header-actions">
+                <form class="header-search" role="search" data-search-form>
+                    <label class="sr-only" for="header-search-input">Buscar prendas</label>
+                    <input id="header-search-input" class="search-input" type="search" name="q" placeholder="Buscar prendas...">
+                    <button class="icon-btn search-submit" type="submit" aria-label="Buscar">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </button>
+                </form>
+
+                <a class="header-action-link cart-link" href="secciones/carrito.html" aria-label="Carrito de compras">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-count" data-cart-count>0</span>
+                </a>
+
+                <a class="header-action-link account-link" href="secciones/login.html" aria-label="Mi cuenta">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span class="action-label">Cuenta</span>
+                </a>
+
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Abrir menú">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
             </div>
-            
-        </header>
-        <main class="main">
-            <section class="inicio">
-                <h1>TEMPORADA</h1>
-                <img src="Imagenes/Inicio/TRAPO BANNER-01.png" alt="banner inicio">
-                <button><a href="secciones/productos.html">Ver productos</a></button>
-            </section>
-            <section class="productos">
-                <h2>NUESTROS PRODUCTOS</h2>
-                <div class="secciones">
-                    <img src="Imagenes/Inicio/secciones-01.png" alt="Hombres">
-                    <img src="Imagenes/Inicio/secciones-02.png" alt="Mujeres">
-                    <img src="Imagenes/Inicio/secciones-03.png" alt="Niños">
-                </div>
-                <ul class="btn-links">
-                    <li><button><a href="secciones/seccion_hombres.html">Para Hombres</a></button></li>
-                    <li><button class="mujeres"><a href="secciones/seccion_mujeres.html">Para Mujeres</a></button></li>
-                    <li><button class="Niños"><a href="secciones/seccion_niños.html">Para Niños</a></button></li>
-                </ul>                
-            </section>
-        </main>
-        <footer class="footer">
-            Todos los derechos reservados a Trapo Sport Wear® 2025
-            <ul class="redes">
-                <li><a class="youtube" href="https://www.youtube.com/@traposportwear/"><button><i class="fa-brands fa-youtube"></i></button>Youtube</a></li>
-                <li><a class="instagram" href="https://www.instagram.com/traposportwear/"><button><i class="fa-brands fa-instagram"></i></button>Instagram</a></li>
-                <li><a class="x" href="https://www.x.com/traposportwear/"><button><i class="fa-brands fa-x-twitter"></i></button>X</a></li>
+        </div>
+    </header>
+
+    <div class="drawer-backdrop" data-drawer-backdrop hidden></div>
+    <aside id="mobile-drawer" class="mobile-drawer" aria-label="Menú móvil" aria-hidden="true" hidden>
+        <div class="mobile-drawer-header">
+            <span class="mobile-drawer-title">Menú</span>
+            <button class="drawer-close" type="button" aria-label="Cerrar menú">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+
+        <form class="drawer-search" role="search" data-search-form>
+            <label class="sr-only" for="drawer-search-input">Buscar prendas</label>
+            <input id="drawer-search-input" class="search-input" type="search" name="q" placeholder="Buscar prendas...">
+            <button class="icon-btn search-submit" type="submit" aria-label="Buscar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </button>
+        </form>
+
+        <nav class="mobile-nav" aria-label="Navegación móvil">
+            <ul class="mobile-nav-list">
+                <li><a class="mobile-nav-link is-active" href="index.html" aria-current="page">Inicio</a></li>
+                <li><a class="mobile-nav-link" href="secciones/productos.html">Productos</a></li>
+                <li><a class="mobile-nav-link" href="secciones/seccion_hombres.html">Hombre</a></li>
+                <li><a class="mobile-nav-link" href="secciones/seccion_mujeres.html">Mujer</a></li>
+                <li><a class="mobile-nav-link" href="secciones/seccion_niños.html">Niño/a</a></li>
+                <li><a class="mobile-nav-link" href="#nosotros">Nosotros</a></li>
+                <li><a class="mobile-nav-link" href="#contacto">Contacto</a></li>
             </ul>
-        </footer>
-    </body>
+        </nav>
+
+        <div class="mobile-drawer-footer">
+            <a class="drawer-action-link" href="secciones/carrito.html">
+                <span class="drawer-action-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    Carrito
+                </span>
+                <span class="cart-count" data-cart-count>0</span>
+            </a>
+            <a class="drawer-action-link" href="secciones/login.html">
+                <span class="drawer-action-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Mi cuenta
+                </span>
+            </a>
+        </div>
+    </aside>
+
+    <main id="main-content" class="site-main">
+        <section id="inicio" class="hero">
+            <img class="hero-media" src="Imagenes/banner_sineslogan.jpeg" alt="Atleta entrenando con indumentaria técnica Trapo Sport Wear">
+            <div class="hero-scrim" aria-hidden="true"></div>
+            <div class="hero-content container">
+                <div class="hero-copy">
+                    <h1 class="hero-title">Indumentaria técnica pensada para el <em class="serif-accent">movimiento</em></h1>
+                    <p class="hero-lead">Cortes anatómicos, tejidos respirables y terminaciones limpias para entrenar en pista o recorrer la ciudad sin fricciones.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="secciones/productos.html">Ver productos</a>
+                        <a class="btn btn-secondary-light" href="#categorias">Explorar líneas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categorias" class="section categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestras líneas</h2>
+                    <a class="section-link" href="secciones/productos.html">Ver catálogo completo</a>
+                </div>
+
+                <div class="categories-grid">
+                    <a class="category-card" href="secciones/seccion_hombres.html">
+                        <div class="category-media">
+                            <img src="Imagenes/Inicio/secciones-01.png" alt="Línea Hombre Trapo Sport Wear">
+                        </div>
+                        <div class="category-body">
+                            <h3 class="category-title">Hombre</h3>
+                            <span class="category-cta">Explorar</span>
+                        </div>
+                    </a>
+
+                    <a class="category-card" href="secciones/seccion_mujeres.html">
+                        <div class="category-media">
+                            <img src="Imagenes/Inicio/secciones-02.png" alt="Línea Mujer Trapo Sport Wear">
+                        </div>
+                        <div class="category-body">
+                            <h3 class="category-title">Mujer</h3>
+                            <span class="category-cta">Explorar</span>
+                        </div>
+                    </a>
+
+                    <a class="category-card" href="secciones/seccion_niños.html">
+                        <div class="category-media">
+                            <img src="Imagenes/Inicio/secciones-03.png" alt="Línea Niños Trapo Sport Wear">
+                        </div>
+                        <div class="category-body">
+                            <h3 class="category-title">Niños</h3>
+                            <span class="category-cta">Explorar</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="section catalog-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Colección de temporada</h2>
+                    <a class="section-link" href="secciones/productos.html">Abrir catálogo</a>
+                </div>
+
+                <div class="filter-bar" role="tablist" aria-label="Filtrar por categoría" data-filter-bar>
+                    <button class="filter-tab is-active" type="button" role="tab" aria-selected="true" data-filter="all">Todos</button>
+                    <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="hombre">Hombre</button>
+                    <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="mujer">Mujer</button>
+                    <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="ninos">Niños</button>
+                </div>
+
+                <div class="catalog-status" data-catalog-status aria-live="polite"></div>
+                <div class="product-grid" data-product-grid data-category="all"></div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="section about-section">
+            <div class="container about-layout">
+                <div class="about-copy">
+                    <h2 class="section-title">Oficio textil para el ritmo diario</h2>
+                    <p class="about-lead">En Trapo Sport Wear diseñamos prendas deportivas esenciales con foco en el calce real, la ventilación y la durabilidad en cada uso.</p>
+                    <p>Creemos en una indumentaria sin excesos: molderías anatómicas probadas en movimiento, costuras planas que evitan roces y géneros técnicos seleccionados para acompañar sesiones intensas de entrenamiento y traslados urbanos.</p>
+                </div>
+
+                <div class="about-pillars">
+                    <article class="pillar-item">
+                        <h3 class="pillar-title">Tejidos respirables</h3>
+                        <p class="pillar-text">Fibras livianas de secado rápido y frisa peinada pensadas para regular la temperatura durante la actividad.</p>
+                    </article>
+                    <article class="pillar-item">
+                        <h3 class="pillar-title">Moldería funcional</h3>
+                        <p class="pillar-text">Cortes articulados en hombros, cintura y rodillas que acompañan el rango completo de movimiento sin deformarse.</p>
+                    </article>
+                    <article class="pillar-item">
+                        <h3 class="pillar-title">Confección durable</h3>
+                        <p class="pillar-text">Costuras reforzadas y avíos resistentes diseñados para soportar lavados frecuentes y uso continuo.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section contact-section">
+            <div class="container contact-layout">
+                <div class="contact-info">
+                    <h2 class="section-title">Contacto</h2>
+                    <p>¿Tenés consultas sobre talles, disponibilidad de prendas o envíos? Escribinos y te respondemos a la brevedad.</p>
+                    <div class="contact-socials">
+                        <a class="social-pill" href="https://www.youtube.com/@traposportwear/" target="_blank" rel="noopener noreferrer">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+                            YouTube
+                        </a>
+                        <a class="social-pill" href="https://www.instagram.com/traposportwear/" target="_blank" rel="noopener noreferrer">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                            Instagram
+                        </a>
+                        <a class="social-pill" href="https://www.x.com/traposportwear/" target="_blank" rel="noopener noreferrer">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+                            X
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" data-contact-form novalidate>
+                    <div class="form-field">
+                        <label for="contact-name">Nombre</label>
+                        <input id="contact-name" class="form-control" type="text" name="nombre" placeholder="Tu nombre completo" required autocomplete="name">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="contact-email">Correo electrónico</label>
+                        <input id="contact-email" class="form-control" type="email" name="email" placeholder="nombre@ejemplo.com" required autocomplete="email">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="contact-message">Consulta</label>
+                        <textarea id="contact-message" class="form-control" name="mensaje" placeholder="Contanos en qué podemos ayudarte" required></textarea>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Enviar consulta</button>
+                    <div class="form-feedback" data-contact-feedback role="status" aria-live="polite" hidden></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <img class="footer-logo" src="Imagenes/Transparente/logo-02.png" alt="Trapo Sport Wear">
+                <p class="footer-copy">Todos los derechos reservados a Trapo Sport Wear® 2025</p>
+            </div>
+
+            <nav class="footer-nav" aria-label="Navegación del pie de página">
+                <a href="index.html">Inicio</a>
+                <a href="secciones/productos.html">Productos</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+                <a href="secciones/carrito.html">Carrito</a>
+                <a href="secciones/login.html">Cuenta</a>
+            </nav>
+
+            <ul class="footer-socials">
+                <li>
+                    <a class="footer-social-link" href="https://www.youtube.com/@traposportwear/" target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+                        <span>YouTube</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="footer-social-link" href="https://www.instagram.com/traposportwear/" target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="footer-social-link" href="https://www.x.com/traposportwear/" target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+                        <span>X</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
 </html>
